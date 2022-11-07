@@ -16,7 +16,10 @@ services:
      - /opt/tpot/etc/compose/elk_environment
     ports:
      - "127.0.0.1:64305:64305"
-    image: "dtagdevsec/logstash:2204"
+    image: "darkon3/wp4_tpotce_logstash:latest"
+    environment:
+      - MAIN_ES_HOST
+      - LOGSTASH_INTERNAL_PASSWORD
     volumes:
      - /data:/data
 #     - /root/tpotce/docker/elk/logstash/dist/logstash.conf:/etc/logstash/conf.d/logstash.conf

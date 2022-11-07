@@ -62,7 +62,7 @@ services:
     ports:
      - "127.0.0.1:64305:64305"
 #    mem_limit: 2g
-    image: "dtagdevsec/logstash:2204"
+    image: "darkon3/wp4_tpotce_logstash:latest"
     volumes:
      - /data:/data
 
