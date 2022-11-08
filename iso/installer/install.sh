@@ -330,7 +330,7 @@ if [ "$myTPOT_DEPLOYMENT_TYPE" == "user" ];
     while [ 1 != 2 ]
       do
         read -s -n 1 -p "Continue [y/n]? " mySELECT
-	echo
+  echo
         case "$mySELECT" in
           [y,Y])
             break
@@ -397,19 +397,19 @@ for i in "$@"
         echo "Usage: $0 <options>"
         echo
         echo "--conf=<Path to \"tpot.conf\">"
-	echo "  Use this if you want to automatically deploy a T-Pot instance (--type=auto implied)."
+  echo "  Use this if you want to automatically deploy a T-Pot instance (--type=auto implied)."
         echo "  A configuration example is available in \"tpotce/iso/installer/tpot.conf.dist\"."
         echo
         echo "--type=<[user, auto, iso]>"
-	echo "  user, use this if you want to manually install a T-Pot on a Debian (Stable) machine."
+  echo "  user, use this if you want to manually install a T-Pot on a Debian (Stable) machine."
         echo "  auto, implied if a configuration file is passed as an argument for automatic deployment."
         echo "  iso, use this if you are a T-Pot developer and want to install a T-Pot from a pre-compiled iso."
         echo
-	exit
+  exit
       ;;
       *)
         echo "$myINFO"
-	exit
+  exit
       ;;
     esac
   done
@@ -428,7 +428,7 @@ if [ -s "$myTPOT_CONF_FILE" ] && [ "$myTPOT_CONF_FILE" != "" ];
       then
         source "$myTPOT_CONF_FILE"
       else
-	echo "Aborting. Config file \"$myTPOT_CONF_FILE\" not a T-Pot configuration file."
+  echo "Aborting. Config file \"$myTPOT_CONF_FILE\" not a T-Pot configuration file."
         exit
       fi
   elif ! [ -s "$myTPOT_CONF_FILE" ] && [ "$myTPOT_CONF_FILE" != "" ];
@@ -704,7 +704,7 @@ if ! [ "$myTPOT_DEPLOYMENT_TYPE" == "iso" ];
   then
     fuBANNER "Cloning T-Pot"
     ### DEV
-    git clone https://github.com/telekom-security/tpotce /opt/tpot
+    git clone https://github.com/IDUNN-project/WP4_tpotce /opt/tpot
 fi
 
 # Let's create the T-Pot user
