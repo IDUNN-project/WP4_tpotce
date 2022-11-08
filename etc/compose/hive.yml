@@ -59,6 +59,7 @@ services:
         condition: service_healthy
     env_file:
      - /opt/tpot/etc/compose/elk_environment
+     - /opt/tpot/etc/compose/elk_environment_integration
     ports:
      - "127.0.0.1:64305:64305"
 #    mem_limit: 2g
